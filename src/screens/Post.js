@@ -1,6 +1,7 @@
 import React from 'react';
-import { View, Text, StyleSheet, Image, TouchableOpacity, TextInput, FlatList} from 'react-native';
+import { View, Text, StyleSheet, Image, TouchableOpacity, TextInput, FlatList, KeyboardAvoidingView} from 'react-native';
 import {FontAwesome, FontAwesome5, Feather, MaterialCommunityIcons, MaterialIcons} from '@expo/vector-icons'
+
 
 function Post(props) {
 
@@ -93,7 +94,7 @@ function Post(props) {
                     <TextInput style={styles.input} placeholderTextColor={'grey'} placeholder='Add a comment....' />
                 </View>
                 <View>
-                    <Text style={[styles.comment, {fontSize: 15}]}>2 hours ago</Text>
+                    <Text style={[styles.comment, {fontSize: 12}]}>2 hours ago</Text>
                 </View>
             </View>
         )
@@ -108,14 +109,14 @@ function Post(props) {
 const styles = StyleSheet.create({
     itemContainer: {
         backgroundColor: 'black',
-        marginBottom: 5,
-        height: 550, 
+        marginBottom: -35,
+        height: 650, 
         marginTop: 6
     },
     nameImageIconContainer: {
         flexDirection: 'row', 
         width: '100%', 
-        height: 60, 
+        height: 50, 
         backgroundColor: '#000', 
         alignItems: 'center',
         justifyContent: 'space-between',
@@ -137,11 +138,11 @@ const styles = StyleSheet.create({
     },
     name1: {
         fontWeight: 'bold', 
-        fontSize: 19, 
+        fontSize: 17, 
         color: '#E0E0E0'
     },
     name2: {
-        fontSize: 14, 
+        fontSize: 13, 
         color: '#E0E0E0'
     },
     iconContainer: {
@@ -151,14 +152,14 @@ const styles = StyleSheet.create({
     }, 
     postImageContainer: {
         width: '100%',
-        height: 280, 
+        height: 365, 
         backgroundColor: 'black', 
         marginTop: -11,
     },
     postImage: {
         width: '100%',
         height: '100%',
-        resizeMode: 'contain'
+        // resizeMode: 'contain'
     },
     iconContainer2: {
         width: '100%',
@@ -194,8 +195,8 @@ const styles = StyleSheet.create({
         marginHorizontal: 8
     },
     commentImage: {
-        width: 35, 
-        height: 35,
+        width: 25, 
+        height: 25,
         borderRadius: 15, 
         marginHorizontal: 15, alignSelf: 'center', 
     },
@@ -210,6 +211,7 @@ const styles = StyleSheet.create({
         height: 28, 
         backgroundColor: 'black',
         alignItems: 'center',
+        marginTop: -12
     },
     nameFirst: {
         fontWeight: 'bold', 
@@ -227,11 +229,11 @@ const styles = StyleSheet.create({
         height: 23, 
         backgroundColor: 'black', 
         justifyContent: 'center',
-        marginTop: 3
+        marginTop: -3
     },
     comment: {
         color: 'grey',
-        fontSize: 16, 
+        fontSize: 14, 
         marginLeft: 15,
     },
     addCommentContainer: {
@@ -241,7 +243,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
     },
     input: {
-        fontSize: 17, 
+        fontSize: 15, 
         color: '#E0E0E0', 
     },
     addCommentCo3ntainer: {},

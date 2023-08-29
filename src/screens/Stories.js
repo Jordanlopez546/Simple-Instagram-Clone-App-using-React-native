@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, FlatList, Image, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, FlatList, Image, TouchableOpacity, ScrollView } from 'react-native';
 
 function Stories(props) {
 
@@ -59,11 +59,11 @@ function Stories(props) {
 const styles = StyleSheet.create({
     container: {
         width: '100%',
-        height: '13%',
+        height: '13.5%',
         backgroundColor: 'black',
         justifyContent: 'center',
         marginTop: 6, 
-        marginBottom: 3
+        marginBottom: 3, 
     },
     storyContainer: {
         backgroundColor: 'black',
