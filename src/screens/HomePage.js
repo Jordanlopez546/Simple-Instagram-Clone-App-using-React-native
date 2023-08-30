@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
-import {View, Text, StyleSheet, Platform, StatusBar, SafeAreaView, ScrollView, TouchableOpacity} from 'react-native'
-import InstagramHeader from './InstagramHeader';
-import {FontAwesome, FontAwesome5, Feather, MaterialCommunityIcons, MaterialIcons} from '@expo/vector-icons'
+import {View, Text, StyleSheet, Platform, StatusBar, SafeAreaView, TouchableOpacity} from 'react-native';
+import {Feather} from '@expo/vector-icons'
 import Stories from './Stories';
 import Post from './Post';
-import { NavigationContainer } from '@react-navigation/native';
 
 
 function HomePage(props) {
@@ -80,7 +78,6 @@ const styles = StyleSheet.create({
         backgroundColor: '#075E54',
         width: '100%',
         flexDirection: 'row',
-        // justifyContent: 'space-around',
         alignItems: 'center',
     },
 });

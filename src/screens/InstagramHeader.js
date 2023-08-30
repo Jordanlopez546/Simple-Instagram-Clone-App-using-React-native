@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
-import {FontAwesome, FontAwesome5, Feather, MaterialCommunityIcons, MaterialIcons} from '@expo/vector-icons'
+import {Feather} from '@expo/vector-icons'
 
 function InstagramHeader(props) {
     return (
@@ -46,4 +46,5 @@ const styles = StyleSheet.create({
         marginHorizontal: 20, 
     }
 })
+
 export default InstagramHeader;

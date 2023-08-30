@@ -1,6 +1,6 @@
 import React from 'react';
-import { View, Text, StyleSheet, Image, TouchableOpacity, TextInput, FlatList, KeyboardAvoidingView} from 'react-native';
-import {FontAwesome, FontAwesome5, Feather, MaterialCommunityIcons, MaterialIcons} from '@expo/vector-icons'
+import { View, Text, StyleSheet, Image, TouchableOpacity, TextInput, FlatList} from 'react-native';
+import {Feather} from '@expo/vector-icons'
 
 
 function Post(props) {
@@ -34,9 +34,23 @@ function Post(props) {
             imagePost: require('../images/aji.jpg'), 
             caption: "My Queen is so cute!!"
         },
+        {
+            posterImage: require('../images/image.jpg'), 
+            name1: "jiggymain",
+            name2: "At my coding house!",
+            imagePost: require('../images/chime.jpg'), 
+            caption: "Finest programmer!!"
+        },
+        {
+            posterImage: require('../images/image.jpg'), 
+            name1: "jordanlopez",
+            name2: "At my coding house!",
+            imagePost: require('../images/three.jpg'), 
+            caption: "Spider freaking man!!"
+        },
     ]
 
-    const RenderItem = ({item}) => {
+    const RenderItem = ({item, index}) => {
         return(
             <View style={styles.itemContainer}>
                 <View style={styles.nameImageIconContainer}>
@@ -89,7 +103,7 @@ function Post(props) {
                 <View style={styles.commentContainer}>
                     <Text style={styles.comment}>View all 208 comments</Text>
                 </View>
-                <View style={styles.addCommentContainer}>
+                <View style={[styles.addCommentContainer]}>
                     <Image style={styles.commentImage}  source={require('../images/three.jpg')} />
                     <TextInput style={styles.input} placeholderTextColor={'grey'} placeholder='Add a comment....' />
                 </View>
@@ -159,7 +173,6 @@ const styles = StyleSheet.create({
     postImage: {
         width: '100%',
         height: '100%',
-        // resizeMode: 'contain'
     },
     iconContainer2: {
         width: '100%',
@@ -246,8 +259,6 @@ const styles = StyleSheet.create({
         fontSize: 15, 
         color: '#E0E0E0', 
     },
-    addCommentCo3ntainer: {},
-    addCommentCon3tainer: {},
 })
 
 export default Post;
