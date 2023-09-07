@@ -19,7 +19,7 @@ export default function App() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 1000);
   }, []);
 
   if (loading) {
@@ -32,7 +32,7 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <Tab.Navigator screenOptions={({route}) => ({headerShown: false, tabBarShowLabel: false, tabBarStyle: {backgroundColor: 'black'}, 
+      <Tab.Navigator initialRouteName='Home' screenOptions={({route}) => ({headerShown: false, tabBarShowLabel: false, tabBarStyle: {backgroundColor: 'black'}, 
     tabBarActiveTintColor: '#E0E0E0', tabBarInactiveTintColor: 'grey'})}>
         <Tab.Screen name={'Home'} component={HomePage} options={{
             tabBarIcon: ({ focused, color, size }) => (

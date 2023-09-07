@@ -1,9 +1,14 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity, TextInput, FlatList} from 'react-native';
 import {Feather} from '@expo/vector-icons'
-
+import { useNavigation } from '@react-navigation/native';
 
 function Post(props) {
+    const  naviagtion = useNavigation();
+
+    const handlePress = () => {
+        naviagtion.navigate('Profile');
+    }
 
     const DATA = [
         {
@@ -55,11 +60,11 @@ function Post(props) {
             <View style={styles.itemContainer}>
                 <View style={styles.nameImageIconContainer}>
                     <View style={styles.nameImageContainer}>
-                        <TouchableOpacity>
+                        <TouchableOpacity onPress={ index === 0 ? handlePress : null}>
                             <Image  style={styles.image} source={item.posterImage} />
                         </TouchableOpacity>
                         <View style={styles.nameContainer}>
-                            <TouchableOpacity>
+                            <TouchableOpacity onPress={ index === 0 ? handlePress : null}>
                                 <Text style={styles.name1}>{item.name1}</Text>
                                 <Text style={styles.name2}>{item.name2}</Text>
                             </TouchableOpacity>
@@ -115,7 +120,7 @@ function Post(props) {
     }
     return (
         <View style={{}}>
-            <FlatList data={DATA} keyExtractor={(item, index) => index + item} renderItem={({item})=> <RenderItem item={item} />} />
+            <FlatList data={DATA} keyExtractor={(item, index) => index + item} renderItem={({item, index})=> <RenderItem item={item} index={index} />} />
         </View>
     );
 }
